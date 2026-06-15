@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+  <nav>
+    <h2>Dashboard</h2>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="quiz.html">Quiz</a>
+      <a href="lab.html">Lab</a>
+      <a href="exam.html">Exam</a>
+    </div>
+  </nav>
+    
+  <section class="container">
+
+    <h1>Uploads Overview</h1>
+    <div class="cards">
+
+      <!-- QUIZ -->
+      <div class="card" onclick="location.href='quiz.html'">
+        <h3>Quiz</h3>
+        <p id="quizCount">0</p>
+      </div>
+
+      <!-- LAB -->
+      <div class="card" onclick="location.href='lab.html'">
+        <h3>Output Lab</h3>
+        <p id="labCount">0</p>
+      </div>
+
+      <!-- EXAM -->
+      <div class="card" onclick="location.href='exam.html'">
+        <h3>Exam</h3>
+        <p id="examCount">0</p>
+      </div>
+
+      <!-- CALCULATOR -->
+      <div class="card" onclick="location.href='activities.html'">
+        <h3>Open</h3>
+        <p>Calculator</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <script src="index.js"></script>
+
+</body>
+</html>
