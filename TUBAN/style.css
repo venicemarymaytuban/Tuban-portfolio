@@ -1,0 +1,370 @@
+/* =====================
+   GLOBAL STYLES
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(180deg, #e0f2fe 0%, #bae6fd 50%, #7dd3fc 100%);
+  color: #102a43;
+  min-height: 100vh;
+}
+
+
+/* =====================
+   NAVIGATION
+===================== */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: rgba(255,255,255,0.88);
+  border-bottom: 1px solid rgba(148,163,184,0.18);
+  backdrop-filter: blur(14px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav h2 {
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+nav div, nav ul {
+  display: flex;
+  gap: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 8px;
+}
+
+nav a:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* =====================
+   CONTAINER
+===================== */
+.container {
+  text-align: center;
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* =====================
+   GLASS EFFECT
+===================== */
+.glass {
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+}
+
+/* =====================
+   PROFILE IMAGE
+===================== */
+.profile {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+
+  
+}
+
+.quiz-display {
+ margin-top: 30px;
+ text-align: center;
+ padding: 20px;
+ border: 2px solid rgba(255, 255, 255, 0.3);
+ border-radius: 20px;
+ background: rgba(255,255,255,0.1);
+}
+
+.quiz-img {
+  width: 100%;
+  max-width: 320px;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+  margin-top: 10px;
+  border: 8px solid rgba(255,255,255,0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.quiz-img:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 14px 30px rgba(0,0,0,0.45);
+}
+
+.upload-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+  margin-top: 28px;
+  text-align: left;
+}
+
+.upload-summary section {
+  background: rgba(255,255,255,0.12);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.upload-summary h3 {
+  margin-bottom: 15px;
+}
+
+
+.upload-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+  border-radius: 14px;
+  padding: 14px;
+  margin-bottom: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.upload-card h4 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.upload-card small {
+  display: block;
+  color: rgba(255,255,255,0.75);
+  font-size: 12px;
+}
+
+.upload-card .quiz-files {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.upload-card .quiz-files img {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 6px solid rgba(255,255,255,0.04);
+}
+
+.upload-card a {
+  color: #00c6ff;
+  text-decoration: underline;
+}
+
+/* make the small upload list areas visually separated */
+.upload-list {
+  padding: 6px 0 2px 0;
+}
+
+/* subtle focus styles for accessibility */
+.card:focus, .upload-card:focus, button:focus, a:focus {
+  outline: 3px solid rgba(0,198,255,0.22);
+  outline-offset: 3px;
+}
+
+/* =====================
+   BUTTONS & LINKS
+===================== */
+button, a {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+button:hover, a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(0, 114, 255, 0.6);
+}
+
+.calculator {
+  max-width: 340px;
+  margin: auto;
+}
+
+.calculator input {
+  width: 100%;
+  padding: 18px 16px;
+  font-size: 24px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.12);
+  color: white;
+  margin-bottom: 18px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.buttons button {
+  min-height: 56px;
+  font-size: 18px;
+}
+
+.buttons button.wide {
+  grid-column: span 2;
+}
+
+/* =====================
+   CARDS
+===================== */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.card {
+  padding: 25px;
+  border-radius: 15px;
+  background: rgba(255,255,255,0.2);
+  min-width: 140px;
+  cursor: pointer;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.05);
+}
+
+/* =====================
+   INPUTS / FORM
+===================== */
+input {
+  display: block;
+  width: 80%;
+  margin: 10px auto;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+input:focus {
+  box-shadow: 0 0 10px rgba(0,198,255,0.5);
+}
+
+form button {
+  margin-top: 15px;
+}
+
+/* =====================
+   LIST (UPLOADS)
+===================== */
+ul#list {
+  margin-top: 20px;
+  list-style: none;
+}
+
+ul#list li {
+  background: rgba(255,255,255,0.2);
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+ul#list li button {
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+/* =====================
+   DARK MODE
+===================== */
+.dark {
+  background: linear-gradient(135deg, #1e1e2f, #121212);
+  color: #ddd;
+}
+
+.dark nav {
+  background: #1e1e1e;
+}
+
+.dark .glass {
+  background: rgba(255,255,255,0.05);
+}
+
+.dark .card {
+  background: rgba(255,255,255,0.08);
+}
+
+.dark input {
+  background: #2a2a2a;
+  color: white;
+}
+
+/* =====================
+   RESPONSIVE DESIGN
+===================== */
+@media (max-width: 600px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .upload-summary {
+    grid-template-columns: 1fr;
+  }
+
+  input {
+    width: 95%;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .container {
+    padding: 20px;
+  }
+}
